@@ -4,8 +4,243 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/output.css' />
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p class="text-3xl text-red-500">Welcome to <%= title %></p>
+  <body class='bg-white p-4 font-sans'>
+    <header class="flex fle-col items-center sm:flex-row sm-justify between sm:items-center">
+      <img src="/images/logo.jpg" alt="logo" class="logo max-w-xs mb2 mt-2 sm:max-w-md sm:mr-12">
+
+      <div class="header-icons flex justify-center items-center w-full sm:justify-between">
+        <input type="text" class="search-bar w-4/5 mr-2 rounded-lg p-1 border border-gray-300 sm:w-2/5">
+        <div class="icons flex justify-center items-center ml-2 space-x-2">
+          <a href="#" class="icon">❤️</a>
+          <a href="#" class="icon">🛒</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="text-left my-4">
+      <ul class="space-y-2 sm:flex sm:space-x-4 sm:space-y-0">
+        <li><a href="#" class="text-gray-600 hover:underline">Nyheter</a></li>
+        <li><a href="#" class="text-gray-600 hover:underline">Topplistan</a></li>
+        <li><a href="#" class="text-gray-600 hover:underline">Rea</a></li>
+        <li><a href="#" class="text-gray-600 hover:underline">Kampanjer</a></li>
+      </ul>
+    </nav>
+
+    <!--Hero Sektion-->
+    <section class="flex flex-col items-center text-center lg:flex-row lg:justify-between lg:items-center lg:text-left">
+      <img src="/images/hero.jpg" alt="Hero image" class="w-full lg:w-3/5 lg:max-w-none">
+      <div class="w-full p-4 lg:w-2/5 lg:mr-5">
+        <h1 class="text-2xl font-bold">Välkommen till Freaky Fashion!</h1>
+        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illum autem voluptatem. Consequatur, eligendi modi. Reiciendis laborum dolores tempora sit architecto voluptate laboriosam, illo suscipit qui. Delectus a dolore reiciendis.</p>
+      </div>
+    </section>
+
+    <!--Spots vid 1024px-->
+    <div class="hidden lg:flex justify-between mt-5">
+      <div class="relative flex-1 mr-2">
+        <img src="/images/shopthelook.jpg" alt="Spot image" class="w-full h-auto">
+      </div>
+      <div class="relative flex-1 mr-2">
+        <img src="/images/shopthelook1.jpg" alt="Spot image" class="w-full h-auto">
+      </div>
+      <div class="relative flex-1 mr-2">
+        <img src="/images/shopthelook2.jpg" alt="Spot image" class="w-full h-auto">
+      </div>
+    </div>
+
+    <!--Produktsektion-->
+    <section class="grid grid-cols-1 gap-4 lg:grid-cols-4 mt-5">
+      <article class="relative border border-gray-300 p-4">
+        <div class="absolute top-5 left-5 bg-red-500 text-white px-2 py-1 text-xs font-bold rounded">Nyhet</div>
+        <div class="absolute bottom-20 right-4 text-red-500 text-lg">
+          <div class="absolute bottom-2 right-2 text-red-500 text-lg full-heart">❤️</div>
+        </div>
+        <a href="product-details.ejs">
+          <img src="/Images/produkt1.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <section class="flex justify-between items-center">
+            <div class="text-left">
+              <h3 class="text-lg font-semibold">Tactile Vest</h3>
+              <p class="text-gray-500">UNIQLO</p>
+            </div>
+            <aside class="text-right text-gray-900">
+              <p> 1500 SEK</p>
+            </aside>
+            
+          </section>
+        </a>
+      </article>
+      <article class="relative border border-gray-300 p-4">
+        <div class="absolute bottom-11 right-2 text-lg empty-heart">🤍</div> <!--Behöver justeras-->
+        </div>
+        <a href="product-details.ejs">
+      
+          <img src="/Images/produkt2.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <section class="flex justify-between items-center">
+            <div class="text-left">
+              <h3 class="text-lg font-semibold">Crystal Blue Jeans</h3>
+              <p class="text-gray-500">Goyard</p>
+            </div>
+            <aside class="text-right text-gray-900">
+              <p> 1799 SEK</p>
+            </aside>
+            
+          </section>
+        </a>
+      </article>
+      <article class="relative border border-gray-300 p-4">
+
+          <i class="fas fa-heart"></i>
+        </div>
+        <a href="product-details.ejs">
+          <img src="/Images/produkt3.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <section class="flex justify-between items-center">
+            <div class="text-left">
+              <h3 class="text-lg font-semibold">Tactile Vest</h3>
+              <p class="text-gray-500">UNIQLO</p>
+            </div>
+            <aside class="text-right text-gray-900">
+              <p> 1500 SEK</p>
+            </aside>
+            
+          </section>
+        </a>
+      </article>
+      <article class="relative border border-gray-300 p-4">
+
+          <i class="fas fa-heart"></i>
+        </div>
+        <a href="product-details.ejs">
+          <img src="/Images/produkt4.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <section class="flex justify-between items-center">
+            <div class="text-left">
+              <h3 class="text-lg font-semibold">Tactile Vest</h3>
+              <p class="text-gray-500">UNIQLO</p>
+            </div>
+            <aside class="text-right text-gray-900">
+              <p> 1500 SEK</p>
+            </aside>
+            
+          </section>
+        </a>
+      </article>
+      <article class="relative border border-gray-300 p-4">
+
+          <i class="fas fa-heart"></i>
+        </div>
+        <a href="product-details.ejs">
+          <img src="/Images/produkt5.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <section class="flex justify-between items-center">
+            <div class="text-left">
+              <h3 class="text-lg font-semibold">Tactile Vest</h3>
+              <p class="text-gray-500">UNIQLO</p>
+            </div>
+            <aside class="text-right text-gray-900">
+              <p> 1500 SEK</p>
+            </aside>
+            
+          </section>
+        </a>
+      </article>
+      <article class="relative border border-gray-300 p-4">
+ 
+          <i class="fas fa-heart"></i>
+        </div>
+        <a href="product-details.ejs">
+          <img src="/Images/produkt6.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <section class="flex justify-between items-center">
+            <div class="text-left">
+              <h3 class="text-lg font-semibold">Tactile Vest</h3>
+              <p class="text-gray-500">UNIQLO</p>
+            </div>
+            <aside class="text-right text-gray-900">
+              <p> 1500 SEK</p>
+            </aside>
+            
+          </section>
+        </a>
+      </article>
+      <article class="relative border border-gray-300 p-4">
+       
+          <i class="fas fa-heart"></i>
+        </div>
+        <a href="product-details.ejs">
+          <img src="/Images/produkt7.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <section class="flex justify-between items-center">
+            <div class="text-left">
+              <h3 class="text-lg font-semibold">Tactile Vest</h3>
+              <p class="text-gray-500">UNIQLO</p>
+            </div>
+            <aside class="text-right text-gray-900">
+              <p> 1500 SEK</p>
+            </aside>
+            
+          </section>
+        </a>
+      </article>
+      <article class="relative border border-gray-300 p-4">
+          <i class="fas fa-heart"></i>
+        </div>
+        <a href="product-details.ejs">
+          <img src="/Images/produkt8.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <section class="flex justify-between items-center">
+            <div class="text-left">
+              <h3 class="text-lg font-semibold">Tactile Vest</h3>
+              <p class="text-gray-500">UNIQLO</p>
+            </div>
+            <aside class="text-right text-gray-900">
+              <p> 1500 SEK</p>
+            </aside>
+            
+          </section>
+        </a>
+      </article>
+    </section>
+
+    <!--Informationstext under produkterna-->
+    <div class="flex flex-col space-y-2 mt-4 text-center lg:flex-row lg:justify-around lg:mt-8 lg:space-x-10">
+      <p class="text-lg">✈️ Expressfrakt</p>
+      <p class="text-lg">🛡️ Säkra betalningar</p>
+      <p class="text-lg">😊 Nyheter varje dag</p>  
+    </div>
+
+    <!--Footer-->
+    <footer class="bg-gray-100 dark:bg-gray-900 mt-10">
+      <div class="w-full max-w-screen-xl px-4 py-6 lg:py-8 mx-auto">
+        <div class="flex flex-col sm:flex-row sm:justify-between gap-8 text-center sm:text-left">
+          <!-- Shopping Section -->
+          <div>
+            <h2 class="mb-4 text-sm font-semibold text-gray-900 dark:text-white">Shopping</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
+              <li><a href="#" class="hover:underline">Vinterjackor</a></li>
+              <li><a href="#" class="hover:underline">Skor</a></li>
+              <li><a href="#" class="hover:underline">Stickat</a></li>
+              <li><a href="#" class="hover:underline">Byxor</a></li>
+            </ul>
+          </div>
+
+          <!-- Mina sidor Section -->
+          <div>
+            <h2 class="mb-4 text-sm font-semibold text-gray-900 dark:text-white">Mina sidor</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
+              <li><a href="#" class="hover:underline">Mina ordrar</a></li>
+              <li><a href="#" class="hover:underline">Mitt konto</a></li>
+            </ul>
+          </div>
+
+          <!-- Kundtjänst Section -->
+          <div>
+            <h2 class="mb-4 text-sm font-semibold text-gray-900 dark:text-white">Kundtjänst</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
+              <li><a href="#" class="hover:underline">Returpolicy</a></li>
+              <li><a href="#" class="hover:underline">Integritetspolicy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6 border-t border-gray-200 pt-6 text-center">
+          <span class="text-sm text-gray-500 dark:text-gray-300">© 2024 FreakyFashion & Co. All Rights Reserved.</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
