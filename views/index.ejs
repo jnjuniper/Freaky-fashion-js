@@ -2,20 +2,25 @@
 <html>
   <head>
     <title><%= title %></title>
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
     <link rel='stylesheet' href='/stylesheets/output.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
-  <body class='bg-white p-4 font-sans'>
-    <header class="flex fle-col items-center sm:flex-row sm-justify between sm:items-center">
-      <img src="/images/logo.jpg" alt="logo" class="logo max-w-xs mb2 mt-2 sm:max-w-md sm:mr-12">
 
-      <div class="header-icons flex justify-center items-center w-full sm:justify-between">
-        <input type="text" class="search-bar w-4/5 mr-2 rounded-lg p-1 border border-gray-300 sm:w-2/5">
-        <div class="icons flex justify-center items-center ml-2 space-x-2">
-          <a href="#" class="icon">❤️</a>
-          <a href="#" class="icon">🛒</a>
-        </div>
-      </div>
-    </header>
+
+  <body class='bg-white p-4 font-sans'>
+   <header class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
+  <img src="/images/logo.jpg" alt="logo" class="logo max-w-xs mb-2 mt-2 sm:max-w-md sm:mr-12">
+
+  <div class="header-icons flex flex-row items-center justify-between w-full mt-4 space-x-2 sm:mt-0">
+    <input type="text" class="search-bar w-4/5 max-w-[80%] rounded-lg p-1 border border-gray-300 sm:max-w-[60%]">
+    <div class="icons flex justify-center items-center space-x-2">
+      <a href="#" class="icon">❤️</a>
+      <a href="#" class="icon">🛒</a>
+    </div>
+  </div>
+  
+</header>
 
     <nav class="text-left my-4">
       <ul class="space-y-2 sm:flex sm:space-x-4 sm:space-y-0">
@@ -38,13 +43,22 @@
     <!--Spots vid 1024px-->
     <div class="hidden lg:flex justify-between mt-5">
       <div class="relative flex-1 mr-2">
+        <a href="#">
         <img src="/images/shopthelook.jpg" alt="Spot image" class="w-full h-auto">
+        <h3 class="absolute top-2 left-2 text-white text-lg font-semibold bg-black bg-opacity-50 px-2 py-1 rounded">Shop The look</h3>
+      </a>
       </div>
       <div class="relative flex-1 mr-2">
+        <a href="#">
         <img src="/images/shopthelook1.jpg" alt="Spot image" class="w-full h-auto">
+        <h3 class="absolute top-2 left-2 text-white text-lg font-semibold bg-black bg-opacity-50 px-2 py-1 rounded">Shop The look</h3>
+      </a>
       </div>
       <div class="relative flex-1 mr-2">
+        <a href="#">
         <img src="/images/shopthelook2.jpg" alt="Spot image" class="w-full h-auto">
+        <h3 class="absolute top-2 left-2 text-white text-lg font-semibold bg-black bg-opacity-50 px-2 py-1 rounded">Shop The look</h3>
+      </a>
       </div>
     </div>
 
@@ -53,142 +67,146 @@
       <article class="relative border border-gray-300 p-4">
         <div class="absolute top-5 left-5 bg-red-500 text-white px-2 py-1 text-xs font-bold rounded">Nyhet</div>
         <div class="absolute bottom-20 right-4 text-red-500 text-lg">
-          <div class="absolute bottom-2 right-2 text-red-500 text-lg full-heart">❤️</div>
+          </div>
+          <div class="absolute bottom-2 right-4 text-gray-400 hover:text-red-500 transition duration-200">
+            <i class="fas fa-heart text-red-500 hover:text-gray-500 absolute bottom-24 right-5"></i>
         </div>
         <a href="product-details.ejs">
           <img src="/Images/produkt1.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Tactile Vest</h3>
+              <h3 class="text-lg font-semibold">Sweatshirt dragkedja</h3>
               <p class="text-gray-500">UNIQLO</p>
             </div>
             <aside class="text-right text-gray-900">
-              <p> 1500 SEK</p>
+              <p> 559 SEK</p>
             </aside>
             
           </section>
         </a>
       </article>
       <article class="relative border border-gray-300 p-4">
-        <div class="absolute bottom-11 right-2 text-lg empty-heart">🤍</div> <!--Behöver justeras-->
+        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
+          <i class="fas fa-heart"></i>
         </div>
         <a href="product-details.ejs">
       
           <img src="/Images/produkt2.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Crystal Blue Jeans</h3>
+              <h3 class="text-lg font-semibold">Bruna Joggers</h3>
               <p class="text-gray-500">Goyard</p>
             </div>
             <aside class="text-right text-gray-900">
-              <p> 1799 SEK</p>
+              <p> 799 SEK</p>
             </aside>
             
           </section>
         </a>
       </article>
       <article class="relative border border-gray-300 p-4">
-
+        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
           <i class="fas fa-heart"></i>
         </div>
         <a href="product-details.ejs">
           <img src="/Images/produkt3.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Tactile Vest</h3>
-              <p class="text-gray-500">UNIQLO</p>
+              <h3 class="text-lg font-semibold">Brun Trenchcoat</h3>
+              <p class="text-gray-500">ZARA</p>
             </div>
             <aside class="text-right text-gray-900">
-              <p> 1500 SEK</p>
+              <p> 4590 SEK</p>
             </aside>
             
           </section>
         </a>
       </article>
       <article class="relative border border-gray-300 p-4">
-
+        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
           <i class="fas fa-heart"></i>
         </div>
         <a href="product-details.ejs">
-          <img src="/Images/produkt4.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+          <img src="/Images/produkt4.jpg" alt="Sneakers class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Tactile Vest</h3>
-              <p class="text-gray-500">UNIQLO</p>
+              <h3 class="text-lg font-semibold">Beige Sneakers</h3>
+              <p class="text-gray-500">ADIDAS</p>
             </div>
             <aside class="text-right text-gray-900">
-              <p> 1500 SEK</p>
+              <p> 759 SEK</p>
             </aside>
             
           </section>
         </a>
       </article>
       <article class="relative border border-gray-300 p-4">
-
+        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
           <i class="fas fa-heart"></i>
         </div>
         <a href="product-details.ejs">
           <img src="/Images/produkt5.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Tactile Vest</h3>
-              <p class="text-gray-500">UNIQLO</p>
+              <h3 class="text-lg font-semibold">Dubbelknäppt Blazer</h3>
+              <p class="text-gray-500">ACNE STUDIO</p>
             </div>
             <aside class="text-right text-gray-900">
-              <p> 1500 SEK</p>
+              <p> 1499 SEK</p>
             </aside>
             
           </section>
         </a>
       </article>
       <article class="relative border border-gray-300 p-4">
- 
+        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
           <i class="fas fa-heart"></i>
         </div>
         <a href="product-details.ejs">
           <img src="/Images/produkt6.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Tactile Vest</h3>
-              <p class="text-gray-500">UNIQLO</p>
+              <h3 class="text-lg font-semibold">Stickad Sweat</h3>
+              <p class="text-gray-500">H&M</p>
             </div>
             <aside class="text-right text-gray-900">
-              <p> 1500 SEK</p>
+              <p> 659 SEK</p>
             </aside>
             
           </section>
         </a>
       </article>
       <article class="relative border border-gray-300 p-4">
-       
+        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
           <i class="fas fa-heart"></i>
         </div>
         <a href="product-details.ejs">
           <img src="/Images/produkt7.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Tactile Vest</h3>
-              <p class="text-gray-500">UNIQLO</p>
+              <h3 class="text-lg font-semibold">Raincoat</h3>
+              <p class="text-gray-500">RAINS</p>
             </div>
             <aside class="text-right text-gray-900">
-              <p> 1500 SEK</p>
+              <p> 999 SEK</p>
             </aside>
             
           </section>
         </a>
       </article>
       <article class="relative border border-gray-300 p-4">
+        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
           <i class="fas fa-heart"></i>
         </div>
         <a href="product-details.ejs">
           <img src="/Images/produkt8.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Tactile Vest</h3>
-              <p class="text-gray-500">UNIQLO</p>
+              <h3 class="text-lg font-semibold">Simple pant</h3>
+              <p class="text-gray-500">CARHARTT</p>
             </div>
             <aside class="text-right text-gray-900">
-              <p> 1500 SEK</p>
+              <p> 1099 SEK</p>
             </aside>
             
           </section>
@@ -205,7 +223,7 @@
 
     <!--Footer-->
     <footer class="bg-gray-100 dark:bg-gray-900 mt-10">
-      <div class="w-full max-w-screen-xl px-4 py-6 lg:py-8 mx-auto">
+      <div class=" hidden md:block w-full max-w-screen-xl px-4 py-6 lg:py-8 mx-auto">
         <div class="flex flex-col sm:flex-row sm:justify-between gap-8 text-center sm:text-left">
           <!-- Shopping Section -->
           <div>
@@ -241,6 +259,56 @@
           <span class="text-sm text-gray-500 dark:text-gray-300">© 2024 FreakyFashion & Co. All Rights Reserved.</span>
         </div>
       </div>
-    </footer>
+
+<!--Accordiong, only for 640px-->
+
+<div id="accordion-collapse" data-accordion="collapse" class="md:hidden">
+  <h2 id="accordion-collapse-heading-1">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+      <span>Shopping</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Vinterjackor</p>
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Skor</p>
+      <p class="text-gray-500 dark:text-gray-400">Stickat</p>
+      <p class="text-gray-500 dark:text-gray-400">Byxor</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-2">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+      <span>Mina Sidor</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Mina ordrar</p>
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Mitt konto</p>
+    </div>
+  </div>
+  <h2 id="accordion-collapse-heading-3">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+      <span>Kundtjänst</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Returpolicy</p>
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Integritetspolicy</p>
+    </div>
+  </div>
+</div>
+
+</footer>
   </body>
 </html>
