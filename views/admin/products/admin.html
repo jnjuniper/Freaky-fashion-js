@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans h-screen flex">
+    <div class="flex h-screen font-sans">
+        <!-- Sidebar -->
+        <aside class="w-48 bg-gray-200 p-5 shadow-lg">
+          <h2 class="text-lg font-bold">Produkter</h2>
+        </aside>
+      
+        <!-- Main content area -->
+        <section class="flex-1 p-5 bg-white">
+
+          <!-- Header -->
+          <header class="flex-row items-center mb-9 bg-gray-500">
+            <h3 class="text-2xl font-bold">Administration</h3>  
+          </header>
+      
+          <!-- Product table -->
+          <button onclick="window.location.href='new.html'" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+            Ny produkt
+          </button>
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="p-3 border">Namn</th>
+                <th class="p-3 border">SKU</th>
+                <th class="p-3 border">Pris</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-50">
+                <td class="p-3 border">Svart T-Shirt</td>
+                <td class="p-3 border">AAA111</td>
+                <td class="p-3 border">199</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="p-3 border">Sneakers</td>
+                <td class="p-3 border">BBB111</td>
+                <td class="p-3 border">649</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="p-3 border">Tactile vest</td>
+                <td class="p-3 border">CCC111</td>
+                <td class="p-3 border">1500</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      
+</body>
+</html>

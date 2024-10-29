@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <header>
+        <h1>Administration</h1>
+    </header> 
+    
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2>Produkter</h2>
+        </aside>
+
+    <section class="admin-create-product">
+        <h2>Ny produkt</h2>
+        <form action="#">
+            <label for="product-name">Namn</label>
+            <input type="text" id="product-name" name="product-name" required>
+    
+            <label for="product-description">Beskrivning</label>
+            <textarea id="product-description" name="product-description" rows="4" required></textarea>
+    
+            <label for="product-image">Bild</label>
+            <input type="file" id="product-image" name="product-image" accept="image/*">
+    
+            <label for="product-sku">SKU</label>
+            <input type="text" id="product-sku" name="product-sku" required>
+    
+            <label for="product-price">Pris</label>
+            <input type="number" id="product-price" name="product-price" required>
+    
+            <fieldset class="product-categories">
+                <legend>Kategorier</legend>
+                <label><input type="checkbox" name="category" value="t-shirts"> T-shirts</label>
+                <label><input type="checkbox" name="category" value="sommar"> Sommar</label>
+                <label><input type="checkbox" name="category" value="byxor"> Byxor</label>
+                <label><input type="checkbox" name="category" value="skor"> Skor</label>
+            </fieldset>
+    
+            <button type="submit">Lägg till</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>

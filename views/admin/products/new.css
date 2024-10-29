@@ -1,0 +1,94 @@
+
+header {
+    background-color: #454242;
+    padding: 20px;
+    text-align: left;
+}
+header h1 {
+    margin:0;
+    font-size: 1.5rem;
+    text-align: left;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+
+.admin-container {
+    display: flex;
+    height: 100vh;
+    font-family: arial, sans-serif;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding:20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.admin-create-product {
+    flex-grow: 1;
+    margin:20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.admin-create-product h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.admin-create-product label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.admin-create-product input[type="text"],
+.admin-create-product input[type="file"],
+.admin-create-product input[type="number"],
+.admin-create-product textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.admin-create-product textarea {
+    resize: vertical;
+}
+
+.product-categories {
+    margin-top: 20px;
+}
+
+.product-categories legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-categories label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.admin-create-product button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.admin-create-product button:hover {
+    background-color: #333;
+}
