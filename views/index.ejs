@@ -64,154 +64,34 @@
 
     <!--Produktsektion-->
     <section class="grid grid-cols-1 gap-4 lg:grid-cols-4 mt-5">
+      <% products.forEach((product)=> { %>
       <article class="relative border border-gray-300 p-4">
+        <% if (product.isNew) { %>
         <div class="absolute top-5 left-5 bg-red-500 text-white px-2 py-1 text-xs font-bold rounded">Nyhet</div>
+        <% } %>
         <div class="absolute bottom-20 right-4 text-red-500 text-lg">
           </div>
           <div class="absolute bottom-2 right-4 text-gray-400 hover:text-red-500 transition duration-200">
+            <% if (product.isLiked) { %>
             <i class="fas fa-heart text-red-500 hover:text-gray-500 absolute bottom-24 right-5"></i>
+            <% } else { %>
+              <i class="fas fa-heart text-gray-500 hover:text-red-500 transition duration-200"></i>
+            <% } %>
         </div>
-        <a href="product-details.ejs">
-          <img src="/Images/produkt1.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
+        <a href="product/<%= products.indexOf(product) %>">
+          <img src="<%= product.image %>" alt="<%= product.name%>" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
-              <h3 class="text-lg font-semibold">Sweatshirt dragkedja</h3>
-              <p class="text-gray-500">UNIQLO</p>
+              <h3 class="text-lg font-semibold"><%= product.name %></h3>
+              <p class="text-gray-500"><%= product.brand %></p>
             </div>
             <aside class="text-right text-gray-900">
-              <p>559 SEK</p>
+              <p><%= product.price %></p>
             </aside>
-            
           </section>
         </a>
       </article>
-      <article class="relative border border-gray-300 p-4">
-        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
-          <i class="fas fa-heart"></i>
-        </div>
-        <a href="product-details.ejs">
-      
-          <img src="/Images/produkt2.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
-          <section class="flex justify-between items-center">
-            <div class="text-left">
-              <h3 class="text-lg font-semibold">Bruna Joggers</h3>
-              <p class="text-gray-500">Goyard</p>
-            </div>
-            <aside class="text-right text-gray-900">
-              <p> 799 SEK</p>
-            </aside>
-            
-          </section>
-        </a>
-      </article>
-      <article class="relative border border-gray-300 p-4">
-        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
-          <i class="fas fa-heart"></i>
-        </div>
-        <a href="product-details.ejs">
-          <img src="/Images/produkt3.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
-          <section class="flex justify-between items-center">
-            <div class="text-left">
-              <h3 class="text-lg font-semibold">Brun Trenchcoat</h3>
-              <p class="text-gray-500">ZARA</p>
-            </div>
-            <aside class="text-right text-gray-900">
-              <p> 4590 SEK</p>
-            </aside>
-            
-          </section>
-        </a>
-      </article>
-      <article class="relative border border-gray-300 p-4">
-        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
-          <i class="fas fa-heart"></i>
-        </div>
-        <a href="product-details.ejs">
-          <img src="/Images/produkt4.jpg" alt="Sneakers class="w-full h-auto mb-4 object-cover">
-          <section class="flex justify-between items-center">
-            <div class="text-left">
-              <h3 class="text-lg font-semibold">Beige Sneakers</h3>
-              <p class="text-gray-500">ADIDAS</p>
-            </div>
-            <aside class="text-right text-gray-900">
-              <p> 759 SEK</p>
-            </aside>
-            
-          </section>
-        </a>
-      </article>
-      <article class="relative border border-gray-300 p-4">
-        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
-          <i class="fas fa-heart"></i>
-        </div>
-        <a href="product-details.ejs">
-          <img src="/Images/produkt5.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
-          <section class="flex justify-between items-center">
-            <div class="text-left">
-              <h3 class="text-lg font-semibold">Dubbelknäppt Blazer</h3>
-              <p class="text-gray-500">ACNE STUDIO</p>
-            </div>
-            <aside class="text-right text-gray-900">
-              <p> 1499 SEK</p>
-            </aside>
-            
-          </section>
-        </a>
-      </article>
-      <article class="relative border border-gray-300 p-4">
-        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
-          <i class="fas fa-heart"></i>
-        </div>
-        <a href="product-details.ejs">
-          <img src="/Images/produkt6.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
-          <section class="flex justify-between items-center">
-            <div class="text-left">
-              <h3 class="text-lg font-semibold">Stickad Sweat</h3>
-              <p class="text-gray-500">H&M</p>
-            </div>
-            <aside class="text-right text-gray-900">
-              <p> 659 SEK</p>
-            </aside>
-            
-          </section>
-        </a>
-      </article>
-      <article class="relative border border-gray-300 p-4">
-        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
-          <i class="fas fa-heart"></i>
-        </div>
-        <a href="product-details.ejs">
-          <img src="/Images/produkt7.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
-          <section class="flex justify-between items-center">
-            <div class="text-left">
-              <h3 class="text-lg font-semibold">Raincoat</h3>
-              <p class="text-gray-500">RAINS</p>
-            </div>
-            <aside class="text-right text-gray-900">
-              <p> 999 SEK</p>
-            </aside>
-            
-          </section>
-        </a>
-      </article>
-      <article class="relative border border-gray-300 p-4">
-        <div class="absolute bottom-24 right-5 text-gray-400 hover:text-red-500 transition duration-200">
-          <i class="fas fa-heart"></i>
-        </div>
-        <a href="product-details.ejs">
-          <img src="/Images/produkt8.jpg" alt="produkt1" class="w-full h-auto mb-4 object-cover">
-          <section class="flex justify-between items-center">
-            <div class="text-left">
-              <h3 class="text-lg font-semibold">Simple pant</h3>
-              <p class="text-gray-500">CARHARTT</p>
-            </div>
-            <aside class="text-right text-gray-900">
-              <p> 1099 SEK</p>
-            </aside>
-            
-          </section>
-        </a>
-      </article>
+      <% }) %>
     </section>
 
     <!--Informationstext under produkterna-->
