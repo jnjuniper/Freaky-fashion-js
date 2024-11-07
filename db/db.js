@@ -3,7 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 var path = require('path');
 
 // Ta fram absolut sökväg till databasfilen
-const dbFilePath = path.resolve(process.cwd(), './db/products.db');
+const dbFilePath = path.resolve(process.cwd(), './db/freakyfashion.db');
 
 //Skapa db-objekt - vi använder detta för att kommunicera med databasen
 

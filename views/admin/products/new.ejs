@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans">
+    <header class="bg-gray-700 p-5 text-left">
+        <h1 class="text-xl text-white font-bold m-0">Administration</h1>
+    </header> 
+
+    <div class="flex h-screen">
+        <aside class="w-1/5 bg-gray-100 p-5 shadow-lg flex flex-col justify-start">
+            <h2 class="text-xl font-bold mb-2">Produkter</h2>
+        </aside>
+
+        <section class="flex-grow m-5 p-5 bg-white border border-gray-300">
+            <h2 class="text-xl font-bold mb-5">Ny produkt</h2>
+            <form action="#">
+                <label for="product-name" class="block mt-4 font-bold">Namn</label>
+                <input type="text" id="product-name" name="product-name" required 
+                    class="w-full p-2 mt-1 border border-gray-300 rounded" />
+
+                <label for="product-description" class="block mt-4 font-bold">Beskrivning</label>
+                <textarea id="product-description" name="product-description" rows="4" required 
+                    class="w-full p-2 mt-1 border border-gray-300 rounded resize-y"></textarea>
+
+                <label for="product-image" class="block mt-4 font-bold">Bild</label>
+                <input type="file" id="product-image" name="product-image" accept="image/*" 
+                    class="w-full p-2 mt-1 border border-gray-300 rounded" />
+
+                <label for="product-sku" class="block mt-4 font-bold">SKU</label>
+                <input type="text" id="product-sku" name="product-sku" required 
+                    class="w-full p-2 mt-1 border border-gray-300 rounded" />
+
+                <label for="product-price" class="block mt-4 font-bold">Pris</label>
+                <input type="number" id="product-price" name="product-price" required 
+                    class="w-full p-2 mt-1 border border-gray-300 rounded" />
+
+                <fieldset class="mt-5">
+                    <legend class="font-bold mb-2">Kategorier</legend>
+                    <label class="block mb-1"><input type="checkbox" name="category" value="t-shirts" class="mr-2"> T-shirts</label>
+                    <label class="block mb-1"><input type="checkbox" name="category" value="sommar" class="mr-2"> Sommar</label>
+                    <label class="block mb-1"><input type="checkbox" name="category" value="byxor" class="mr-2"> Byxor</label>
+                    <label class="block mb-1"><input type="checkbox" name="category" value="skor" class="mr-2"> Skor</label>
+                </fieldset>
+
+                <button type="submit" 
+                    class="mt-5 py-2 px-4 bg-black text-white rounded hover:bg-gray-700">
+                    Lägg till
+                </button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
