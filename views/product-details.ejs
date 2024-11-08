@@ -9,7 +9,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
+<header>
+  <body class='bg-white p-4 font-sans'>
+    <header class="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center">
+   <img src="/images/logo.jpg" alt="logo" class="logo max-w-xs mb-2 mt-2 sm:max-w-md sm:mr-12">
+ 
+   <div class="header-icons flex flex-row items-center justify-between w-full mt-4 space-x-2 sm:mt-0">
+     <input type="text" class="search-bar w-4/5 max-w-[80%] rounded-lg p-1 border border-gray-300 sm:max-w-[60%]">
+     <div class="icons flex justify-center items-center space-x-2">
+       <a href="#" class="icon">❤️</a>
+       <a href="#" class="icon">🛒</a>
+     </div>
+   </div>
+   
+ </header>
+ 
+     <nav class="text-left my-4">
+       <ul class="space-y-2 sm:flex sm:space-x-4 sm:space-y-0">
+         <li><a href="#" class="text-gray-600 hover:underline">Nyheter</a></li>
+         <li><a href="#" class="text-gray-600 hover:underline">Topplistan</a></li>
+         <li><a href="#" class="text-gray-600 hover:underline">Rea</a></li>
+         <li><a href="#" class="text-gray-600 hover:underline">Kampanjer</a></li>
+       </ul>
+     </nav>
+</header>
 
     <h1><%= product.name %></h1>
     <p>Brand: <%= product.brand%> </p>

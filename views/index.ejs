@@ -64,7 +64,7 @@
 
     <!--Produktsektion-->
     <section class="grid grid-cols-1 gap-4 lg:grid-cols-4 mt-5">
-      <% products.forEach((product)=> { %>
+      <% products.forEach((product, index)=> { %>
       <article class="relative border border-gray-300 p-4">
         <% if (product.isNew) { %>
         <div class="absolute top-5 left-5 bg-red-500 text-white px-2 py-1 text-xs font-bold rounded">Nyhet</div>
@@ -78,7 +78,7 @@
               <i class="fas fa-heart text-gray-500 hover:text-red-500 transition duration-200"></i>
             <% } %>
         </div>
-        <a href="product/<%= products.indexOf(product) %>">
+        <a href="/products/<%= index %>">
           <img src="<%= product.image %>" alt="<%= product.name%>" class="w-full h-auto mb-4 object-cover">
           <section class="flex justify-between items-center">
             <div class="text-left">
