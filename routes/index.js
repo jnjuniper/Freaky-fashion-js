@@ -22,18 +22,27 @@ router.get('/', function(req, res, next) {
 });
 
 // Route to handle separate product details
-router.get('/products/:id', function(req, res, next) {
-  const productId = parseInt(req.params.id, 10); // convert ID to a number
-  const product = products [productId];
+router.get('/products/:slug', function(req, res, next) {
+  const productSlug = req.params.slug;
+const product = products.find(p => p.slug === req.params.slug);
 
-  if (!product) {
-    return res.status(404).send('Product not found');
-  }
+if (!product) {
+  return res.status(404).send('Produkt hittades inte');
+}
 
-  res.render('Product-details', {
-    title: product.name,
-    product: product
+// hämta 3 slumpade produkter
+const similarProducts = products
+.filter(p=> p.slug !== productSlug)
+.sort(() => 0.5 - Math.random())
+.slice(0, 3);
+
+res.render('Product-details', {
+  title: product.name,
+  product:product,
+  similarProducts: similarProducts,
   });
+
 });
+
 
 module.exports = router;

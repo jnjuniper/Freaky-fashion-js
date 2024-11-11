@@ -3,6 +3,7 @@
 const products = [
     {
       name:'Sweatshirt dragkedja',
+      slug: 'sweatshirt-dagkedja',
       brand:'UNIQLO',
       price:'559 SEK',
       image:'/images/produkt1.jpg',
@@ -11,6 +12,7 @@ const products = [
     },
     {
       name:'Bruna Joggers',
+      slug: 'bruna-joggers',
       brand:'Goyard',
       price:'799 SEK',
       image:'/images/produkt2.jpg',
@@ -19,6 +21,7 @@ const products = [
     },
     {
       name:'Brun Trenchcoat',
+      slug: 'brun-trenchcoat',
       brand:'ZARA',
       price:'4590 SEK',
       image:'/images/produkt3.jpg',
@@ -27,6 +30,7 @@ const products = [
     },
     {
       name:'Beige Sneakers',
+      slug: 'beige-sneakers',
       brand:'ADIDAS',
       price:'759 SEK',
       image:'/images/produkt4.jpg',
@@ -35,6 +39,7 @@ const products = [
     },
     {
       name:'Dubbelknäppt blazer',
+      slug: 'dubbelknappt-blazer',
       brand:'ACNE STUDIO',
       price:'1499 SEK',
       image:'/images/produkt5.jpg',
@@ -43,6 +48,7 @@ const products = [
     },
     {
       name:'Stickad Sweat',
+      slug: 'stickad-sweat',
       brand:'H&M',
       price:'659 SEK',
       image:'/images/produkt6.jpg',
@@ -51,6 +57,7 @@ const products = [
     },
     {
       name:'Raincoat',
+      slug: 'raincoat',
       brand:'RAINS',
       price:'999 SEK',
       image:'/images/produkt7.jpg',
@@ -59,6 +66,7 @@ const products = [
     },
     {
       name:'Simple Pant',
+      slug: 'simple-pant',
       brand:'CARHARTT',
       price:'1099 SEK',
       image:'/images/produkt8.jpg',
