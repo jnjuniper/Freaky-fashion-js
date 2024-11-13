@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administration</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans">
@@ -19,14 +19,15 @@
       <section class="w-4/5 p-5">
           <header class="flex justify-between items-center">
               <h3 class="text-black, font-bold">Produkter</h3>
-              <button class="py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500" onclick="location.href='#'">
+              <div class="flex space-x-2">
+              <button id="loadProductsButton" class="py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500">
                 Ladda Produkter
             </button>
 
-              <button class="py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500" onclick="location.href='new.ejs'">
+              <button class="py-2 px-4 bg-green-600 text-white rounded hover:bg-green-500" onclick="location.href='/admin/new'">
                   Ny produkt
               </button>
-
+            </div>
           </header>
 
           <table class="w-full border-collapse mt-5">
@@ -37,26 +38,12 @@
                       <th class="p-3 border border-gray-300 text-left">Pris</th>
                   </tr>
               </thead>
-              <tbody>
-                  <tr class="bg-gray-100">
-                      <td class="p-3 border border-gray-300">Svart T-Shirt</td>
-                      <td class="p-3 border border-gray-300">AAA111</td>
-                      <td class="p-3 border border-gray-300">199</td>
-                  </tr>
-                  <tr class="bg-white">
-                      <td class="p-3 border border-gray-300">Sneakers</td>
-                      <td class="p-3 border border-gray-300">BBB111</td>
-                      <td class="p-3 border border-gray-300">649</td>
-                  </tr>
-                  <tr class="bg-gray-100">
-                      <td class="p-3 border border-gray-300">Tactile vest</td>
-                      <td class="p-3 border border-gray-300">CCC111</td>
-                      <td class="p-3 border border-gray-300">1500</td>
-                  </tr>
+              <tbody id="productTableBody">
+                  <!-- Products will be fetched from DB here-->
               </tbody>
           </table>
       </section>
   </div>
+  <script src="/javascripts/admin.js"></script>
 </body>
-
 </html>

@@ -1,27 +1,19 @@
 var express = require('express');
 var router = express.Router();
+const database = require('better-sqlite3');
 const db = require('../db/db');
 const products = require('../data/products');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    const sql = `
-      SELECT product_name, 
-      SKU, 
-      product_price
-      FROM products
-    `;
-   
-   
-    db.all(sql, [], function (error, rows) {
       res.render('Index',{
       title: 'Freaky Fashion',
       products: products,
       });
     }); 
-});
 
-// Route to handle separate product details
+
+
 router.get('/products/:slug', function(req, res, next) {
   const productSlug = req.params.slug;
 const product = products.find(p => p.slug === req.params.slug);

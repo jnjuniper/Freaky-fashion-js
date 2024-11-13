@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administration</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans">
@@ -18,7 +18,7 @@
 
         <section class="flex-grow m-5 p-5 bg-white border border-gray-300">
             <h2 class="text-xl font-bold mb-5">Ny produkt</h2>
-            <form action="#">
+            <form action="/admin/new" method="POST">
                 <label for="product-name" class="block mt-4 font-bold">Namn</label>
                 <input type="text" id="product-name" name="product-name" required 
                     class="w-full p-2 mt-1 border border-gray-300 rounded" />
@@ -28,7 +28,7 @@
                     class="w-full p-2 mt-1 border border-gray-300 rounded resize-y"></textarea>
 
                 <label for="product-image" class="block mt-4 font-bold">Bild</label>
-                <input type="file" id="product-image" name="product-image" accept="image/*" 
+                <input type="text" id="product-image" name="product-image" required 
                     class="w-full p-2 mt-1 border border-gray-300 rounded" />
 
                 <label for="product-sku" class="block mt-4 font-bold">SKU</label>
