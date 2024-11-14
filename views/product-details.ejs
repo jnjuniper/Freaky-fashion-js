@@ -36,30 +36,34 @@
      </nav>
 </header>
 
-<section class="product-details flex flex-col items-center lg:flex-row lg:items-start lg:space-x-8 p-6">
+<section class="product-details flex flex-col items-center sm:flex-row sm:items-start sm:space-x-8 p-6">
 
-  <img src="<%= product.image %>" alt="<%= product.name%>" class="product-image w-full max-w-xs mb-4 lg:mb-0">
-<div class="product-info lg:w-2/3">
+  <img src="<%= product.image %>" alt="<%= product.name%>" class="product-image w-full max-w-lg sm:max-w-xl mb-4 sm:mb-0">
+<div class="product-info sm:w-2/3">
   <h1 class="text-2xl font-bold mb-2"><%= product.name %></h1>
     <p class="text-lg text-gray-600 mb-4"><%= product.brand%></p>
-    <p class="text--xl font-semibold text-gray-800 mb-6"><%= product.price %></p>
+    <p class="text-lg text-gray-600 mb-4"><%= product.description%></p>
+    <p class="text-xl font-semibold text-gray-800 mb-6"><%= product.price %></p>
   <button class="add-to-cart bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Lägg i varukorg</button>
   </div>
 </section>
-<!-- Gör bilden lite större för produkten, fortsätt under med liknande produkter-->
 
-<!--Liknande produkter-->
+
 <section class="similar-products mt-12">
   <h2 class="text-2xl font-semibold text-center mb-6">Liknande produkter</h2>
-  <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="product-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
     <% similarProducts.forEach(similarProduct => { %>
       <div class="product border rounded-lg p-4 hover:shadow-lg transition-shadow">
-        <a href="/products/<%= similarProduct.slug %>" class="block text-center"> <!-- Use slug here, or similarProduct.id if available -->
-          <img src="<%= similarProduct.image %>" alt="<%= similarProduct.name %>" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="product-info">
+        <a href="/products/<%= similarProduct.slug %>" class="block">
+          <img src="<%= similarProduct.image %>" alt="<%= similarProduct.name %>" class="w-full object-cover rounded-lg mb-4">
+          <div class="product-info flex justify-between items-start">
+            <div class="text-left">
             <h3 class="text-xl font-medium text-gray-800"><%= similarProduct.name %></h3>
             <p class="text-gray-600"><%= similarProduct.brand %></p>
+          </div>
+            <div class="text-right">
             <p class="text-lg font-semibold text-gray-800 mt-2"><%= similarProduct.price %></p>
+          </div>
           </div>
         </a>
       </div>
@@ -67,18 +71,18 @@
   </div>
 </section>
 
-    <!--Informationstext under produkterna-->
-    <div class="flex flex-col space-y-2 mt-4 text-center lg:flex-row lg:justify-around lg:mt-8 lg:space-x-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 text-center">
+        <p class="text-lg">🌎 Gratis frakt och returer</p>  
         <p class="text-lg">✈️ Expressfrakt</p>
         <p class="text-lg">🛡️ Säkra betalningar</p>
         <p class="text-lg">😊 Nyheter varje dag</p>  
       </div>
   
-      <!--Footer-->
+      
       <footer class="bg-gray-100 dark:bg-gray-900 mt-10">
         <div class=" hidden md:block w-full max-w-screen-xl px-4 py-6 lg:py-8 mx-auto">
           <div class="flex flex-col sm:flex-row sm:justify-between gap-8 text-center sm:text-left">
-            <!-- Shopping Section -->
+            
             <div>
               <h2 class="mb-4 text-sm font-semibold text-gray-900 dark:text-white">Shopping</h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
@@ -89,7 +93,7 @@
               </ul>
             </div>
   
-            <!-- Mina sidor Section -->
+            
             <div>
               <h2 class="mb-4 text-sm font-semibold text-gray-900 dark:text-white">Mina sidor</h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
@@ -98,7 +102,7 @@
               </ul>
             </div>
   
-            <!-- Kundtjänst Section -->
+            
             <div>
               <h2 class="mb-4 text-sm font-semibold text-gray-900 dark:text-white">Kundtjänst</h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
@@ -108,6 +112,7 @@
             </div>
           </div>
   
+          <!----Accordion----->
           <div class="mt-6 border-t border-gray-200 pt-6 text-center">
             <span class="text-sm text-gray-500 dark:text-gray-300">© 2024 FreakyFashion & Co. All Rights Reserved.</span>
           </div>

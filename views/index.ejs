@@ -65,7 +65,7 @@
     </div>
 
     <!--Produktsektion-->
-    <section class="grid grid-cols-1 gap-4 lg:grid-cols-4 mt-5">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4 mt-5">
       <% products.forEach((product, index)=> { %>
       <article class="relative border border-gray-300 p-4">
         <% if (product.isNew) { %>
@@ -97,7 +97,8 @@
     </section>
 
     <!--Informationstext under produkterna-->
-    <div class="flex flex-col space-y-2 mt-4 text-center lg:flex-row lg:justify-around lg:mt-8 lg:space-x-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 text-center">
+      <p class="text-lg">🌎 Gratis frakt och returer</p>
       <p class="text-lg">✈️ Expressfrakt</p>
       <p class="text-lg">🛡️ Säkra betalningar</p>
       <p class="text-lg">😊 Nyheter varje dag</p>  
