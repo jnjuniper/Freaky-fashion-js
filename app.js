@@ -26,11 +26,11 @@ app.get('/product-details', function(req, res){
   res.render('product-details');
 });
 
-app.get('/products', (req, res) => {
+app.get('/admin/products', (req, res) => {
   res.render('admin/products');
 });
 
-app.get('/admin/new', (req, res)=> {
+app.get('/admin/products/new', (req, res)=> {
   res.render('admin/new');
 });
 
@@ -59,7 +59,7 @@ try {
   `);
   stmt.run(name, sku, price);
 
-  res.redirect('/products');
+  res.redirect('/admin/products');
 } catch (err) {
   console.error('Kunde inte lägga in produkt i databas' ,err);
   res.status(500).send('Server Error');
