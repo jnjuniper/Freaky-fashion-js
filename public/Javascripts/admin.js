@@ -10,7 +10,7 @@ document.getElementById('loadProductsButton').addEventListener('click', function
       })
       .then(products => {
         const tbody = document.getElementById('productTableBody');
-        tbody.innerHTML = ''; // Clears existing rows
+        tbody.innerHTML = '';
   
         products.forEach((product, index) => {
           const tr = document.createElement('tr');

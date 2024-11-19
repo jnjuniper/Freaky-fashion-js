@@ -22,7 +22,7 @@ if (!product) {
   return res.status(404).send('Produkt hittades inte');
 }
 
-// hämta 3 slumpade produkter
+
 const similarProducts = products
 .filter(p=> p.slug !== productSlug)
 .sort(() => 0.5 - Math.random())
